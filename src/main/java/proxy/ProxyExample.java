@@ -8,5 +8,8 @@ public class ProxyExample {
         Animal proxy=(Animal)Proxy.newProxyInstance(realObject.getClass().getClassLoader(),
                 realObject.getClass().getInterfaces(), new AnimalInvocationHandler(realObject));
         proxy.getSound();
+        
+        Image image=new ProxyImage("picture.png");
+        image.display();
     }
 }
