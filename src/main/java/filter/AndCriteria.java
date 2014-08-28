@@ -10,7 +10,6 @@ public class AndCriteria implements Criteria{
 		this.criteria=criteria;
 		this.otherCriteria=otherCriteria;
 	}
-	@Override
 	public List<Person> meetCriteria(List<Person> list) {
 		List<Person> first=criteria.meetCriteria(list);
 		return otherCriteria.meetCriteria(first);

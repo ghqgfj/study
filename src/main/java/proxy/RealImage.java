@@ -13,7 +13,6 @@ public class RealImage implements Image {
 		System.out.println("Loading " + fileName);
 	}
 
-	@Override
 	public void display() {
 		System.out.println("Real Image is displayed");
 	}

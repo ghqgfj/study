@@ -8,7 +8,6 @@ public class ProxyImage implements Image {
 		this.fileName = fileName;
 	}
 
-	@Override
 	public void display() {
 		if(image!=null)image.display();
 		else{

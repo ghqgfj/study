@@ -4,7 +4,6 @@ public class InterruptTest {
 	public static void main(String[] args){
 		Thread t=new Thread(new Runnable(){
 
-			@Override
 			public void run() {
 				try{
 					System.out.println("before start");
