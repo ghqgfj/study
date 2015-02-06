@@ -6,7 +6,7 @@ public class ServerMain {
         //singleServer();
     }
     public static void singleServer(){
-        SingleThreadedServer server = new SingleThreadedServer(9000);
+        SingleThreadedServer server = new SingleThreadedServer(9001);
         new Thread(server).start();
         try {
             Thread.sleep(10 * 1000);
@@ -19,6 +19,17 @@ public class ServerMain {
     public static void multiServer(){
         MultiThreadedServer server=new MultiThreadedServer(9000);
         new Thread(server).start();
+        try{
+            Thread.sleep(20*1000);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
+        System.out.println("Stopping Server");
+        server.stop();
+    }
+    public static void threadPooledServer(){
+    	ThreadPooledServer server=new ThreadPooledServer(8080);
+    	server.run();
         try{
             Thread.sleep(20*1000);
         }catch(InterruptedException e){

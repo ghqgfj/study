@@ -11,7 +11,7 @@ public class Circle implements Shape{
 	}
     public void draw() {
         System.out.println("Inside Circle::draw() method");
-        System.out.println("[color: "+color+"x: "+x+"  y:"+y+"  radius"+radius+"]");        
+        System.out.println("[color: "+color+"; x: "+x+",y:"+y+";  radius:"+radius+"]");        
     }
     public void setX(int x){
     	this.x=x;

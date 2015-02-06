@@ -20,12 +20,13 @@ public class MultiThreadedServer implements Runnable{
        while(!isStopped){
            Socket clientSocket=null;
            try {
-            clientSocket=this.serverSocket.accept();
+            clientSocket=this.serverSocket.accept();      
         } catch (IOException e) {
             if(isStopped){
                 System.out.println("Server Stopped");
-            }
-            throw new RuntimeException("Error accepting client connection",e);
+            }          	
+           throw new RuntimeException("Error accepting client connection",e);
+            
         }
            new Thread(new WorkerRunnable(clientSocket,"Multithreaded Server")).start();
        }
